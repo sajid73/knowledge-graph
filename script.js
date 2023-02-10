@@ -1,5 +1,5 @@
 var data;
-await fetch("/data.json")
+await fetch("data.json")
     .then((res) => res.json())
     .then((res) => {
         data = res
