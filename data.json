@@ -1,0 +1,30 @@
+[
+    {
+        "tableName": "address",
+        "data": [
+            {
+                "self": "@eid1",
+                "location": "200 Univ Ave",
+                "city": "Waterloo",
+                "country": "Canada"
+            },
+            {
+                "self": "@eid3",
+                "location": "100 Univ Ave",
+                "city": "CTG",
+                "country": "BD"
+            }
+        ]
+    },
+    {
+        "tableName": "doctor",
+        "data": [
+            {
+                "self": "@eid2",
+                "docId": "D101",
+                "drName": "Dr Henry Jekyll",
+                "address": "@eid1"
+            }
+        ]
+    }
+]
