@@ -26,7 +26,7 @@ data.map(table => {
         color: "#2c8fb3"
     });
     tableNames.push({id: tableid, name: table.tableName});
-    edges1.push({ from: tableid, to: selfid, color: "black" })
+    edges1.push({ from: tableid, to: selfid, color: "black", label: "self" })
     table.data.map((rows) => {
         Object.entries(rows).forEach(([key, value]) => {
             if(key === "self"){
@@ -41,7 +41,7 @@ data.map(table => {
             nodes1.push({
                 id: nodeid, label: value, color: "#46c3a0"
             })
-            edges1.push({ from: tableid, to: nodeid, color: "black" })
+            edges1.push({ from: tableid, to: nodeid, color: "black", label: key })
             edges1.push({ from: selfid, to: nodeid, color: "black" })
         });
     })
