@@ -34,7 +34,8 @@ data.map(table => {
             }
             var fTable = tableNames.find(el => el.name === key)
             if(fTable){
-                edges1.push({ from: selfid, to: fTable.id, color: "black" });
+                edges1.push({ from: fTable.id, to: selfid, color: "black", label: key });
+                // edges1.push({ from: selfid, to: fTable.id, color: "black", label: key });
                 return
             }
             nodeid = it++;
@@ -42,7 +43,7 @@ data.map(table => {
                 id: nodeid, label: value, color: "#46c3a0"
             })
             edges1.push({ from: tableid, to: nodeid, color: "black", label: key })
-            edges1.push({ from: selfid, to: nodeid, color: "black" })
+            edges1.push({ from: selfid, to: nodeid, color: "black", label: key })
         });
     })
 })
